@@ -14,9 +14,17 @@
     <div class="banner">
         <div class="banner-content">
             <h1 id="name">Niels ter Heerdt</h1>
-            <p>Some projects</p>
+            <p>Some projects I did throughout the years</p>
         </div>
     </div>
+    <div class="legend">
+        <span class="legend-item university active" data-filter="university">University Projects</span>
+        <span class="legend-item solarboattwente active" data-filter="solarboattwente">Solar Boat Twente</span>
+        <span class="legend-item ownproject active" data-filter="ownproject">Own Projects</span>
+        <span class="legend-item highschool active" data-filter="highschool">High School Projects</span>
+    </div>
+    
+    
 
     <div class="portfolio-container">
         <div class="portfolio-grid">
@@ -35,7 +43,7 @@
                     <img src="images/glasses/FrontView.jpeg" alt="Project 2">
                 </a>
                 <a href="glases.html">
-                    <h3>Smart glases the help hearing impaired people</h3>
+                    <h3>Smart glases</h3>
                 </a>
                 <p>During this project in module 11 we created smart glasses (Google glasses) which could help people with bad hearing to 
                     "see" the direction of the sound.</p>
@@ -66,7 +74,7 @@
                     <img src="images/MPPT/MPPT.jpg" alt="Project 5">
                 </a>
                 <a href="MPPT.html">
-                    <h3>Maximum Power Point Trackers(MPPT)</h3>
+                    <h3>Maximum Power Point Trackers</h3>
                 </a>
                 <p>I contiued on an open source MPPT design to make it optimal and aplicable to our project.</p>
             </div>
@@ -75,7 +83,7 @@
                     <img src="images/solar/cleanpanel.png" alt="Project 6">
                 </a>
                 <a href="solarpanel.html">
-                    <h3>Solar panels </h3>
+                    <h3>Solarpanels </h3>
                 </a>
                 <p>For Solar Boat Twente we had to create a new solardeck, this included soldering the cells, laminating the cells and testing the cells.</p>
             </div>
@@ -138,7 +146,7 @@
                     <img src="images/SolarSlingerbos/Zonnepaneelslingbos.png" alt="Project 13">
                 </a>
                 <a href="SolarpanelsHighschool.html">
-                    <h3>Solar panels for ontop of the highschool</h3>
+                    <h3>Nul op de meter 2025</h3>
                 </a>
                 <p>At my highschool they wanted to place solarpanels ontop of the roof. Here we did everything from finding the companies until doing the negotiations.</p>
             </div>
@@ -147,13 +155,38 @@
                     <img src="images/Kruispunt/kruispuntvoorbeeld.png" alt="Project 14">
                 </a>
                 <a href="Trafic.html">
-                    <h3>Optimization traficlight</h3>
+                    <h3>Optimization crossing</h3>
                 </a>
                 <p>For the province of Noord Holland we had to design a new crossing at a not well functioning crossing with a high ephasisis on the bike highway that would be build</p>
             </div>
         </div>
     </div>
-
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const legendItems = document.querySelectorAll(".legend-item");
+            const items = document.querySelectorAll(".portfolio-grid .item");
+    
+            legendItems.forEach(legend => {
+                legend.addEventListener("click", () => {
+                    // Toggle active class
+                    legend.classList.toggle("active");
+    
+                    // Get all active filters
+                    const activeFilters = Array.from(legendItems)
+                        .filter(el => el.classList.contains("active"))
+                        .map(el => el.dataset.filter);
+    
+                    // Show/hide items
+                    items.forEach(item => {
+                        const itemClasses = item.classList;
+                        const match = activeFilters.some(filter => itemClasses.contains(filter));
+                        item.style.display = match ? "block" : "none";
+                    });
+                });
+            });
+        });
+    </script>
+    
 </body>
 
 </html>
