@@ -233,6 +233,19 @@ body {
         padding: 0;
         color: rgb(68, 68, 68);
     }
+}
+/* Color-coded backgrounds for project types */
+.item.solarboattwente {
+    background-color: #e0f3e0; /* Light blue */
+}
 
+.item.university {
+    background-color: #fffaf0; /* Lavender blush */
+}
 
+.item.ownproject {
+    background-color: #efedfa; /* Light green */
+}
+.item.highschool {
+    background-color: #ffe6fb; /* Light green */
 }
