@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Project Title</title>
+</head>
+
+<body>
+
+    <!-- Banner Section -->
+    <div class="banner">
+        <div class="banner-content">
+            <a href="index.html" class="back-button">&larr; Back</a>
+            <h1>MPPT</h1>
+            <div class="year">2024</div>
+        </div>
+    </div>
+
+    <!-- Project Content -->
+    <div class="project-container">
+        <div class="project-content">
+            <div class="text left">
+                <h2>About the Project</h2>
+                <p>During my year at Solar Boat Twente we had many challenges to tackle. One of the main challenges was
+                    that the Maximum Power Point Trackers (MPPT) on the boat where very inefficient namely 80%.
+                    An open source MPPT was fount from Tjitte (TPEE). This was used as a basis for the design as it was
+                    already known that the basis design worked but it needed to be changed to our application.
+                </p>
+            </div>
+
+
+            <div class="image right">
+                <img src="images/MPPT/DSC_9390 EURO CURCUITS PCB.jpg" alt="Project Image">
+            </div>
+        </div>
+
+
+        <div class="project-content">
+
+            <div class="text right">
+                <h2>PCB Layout</h2>
+                <p>The first step was to dive into the redesigning of PCBs. For the design of PCBs Altium Designer was
+                    used. </p>
+                <p> The main points that were improved during the design were:</p>
+                <ul>
+                    <li>redesign the CAN interface</li>
+                    <li>Improved component selection (Different mosfets, inductors and capacitors)</li>
+                    <li>Changed traces to be more Short circuit safe</li>
+                </ul>
+                The design was codesigned with one of our partners to teach me what to concider when designing an PCB
+            </div>
+
+            <div class="image left">
+                <img src="images/MPPT/DSC_9405 EURO CURCUITS PCB.png" alt="Project Image">
+            </div>
+        </div>
+
+
+
+        <div class="project-content">
+            <div class="text left">
+                <h2>Production</h2>
+                <p>After having redesigned the PCB layout it was time for production. One of the main requirements was
+                    making it more reliable. This was achieved by not soldering the SMD chips by hand but only the
+                    throughhole components.
+                    Some SMD chips had to be soldered by hand, this was done using a small soldering iron and a
+                    microscope.
+                </p>
+            </div>
+
+
+            <div class="image right">
+                <img src="images/MPPT/Production.jpg" alt="Project Image">
+            </div>
+        </div>
+
+
+        <div class="project-content">
+            <div class="text left">
+                <h2>Testing</h2>
+                <p>To see if the MPPTs that were produced are as efficient as hoped a test was performed at one of our
+                    partners
+                    who have a solar panel simulator which can be used to make an efficiency graph. As you can
+                    specificly control the avalaible power and
+                    you can measure the output power.
+                </p>
+            </div>
+
+
+            <div class="image right">
+                <img src="images/MPPT/efficiency.png" alt="Project Image">
+            </div>
+        </div>
+        <div class="project-content">
+
+            <div class="text right">
+                <h2>Implementation</h2>
+                <p>The last step in the implementation was that it stayed cool </p>
+            </div>
+
+            <div class="image left">
+                <img src="images/MPPT/MPPT.jpg" alt="Project Image">
+            </div>
+        </div>
+    </div>
+
+
+
+    </div>
+
+
+
+</body>
+
+</html>
